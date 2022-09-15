@@ -5,7 +5,7 @@ This action checks your `.bumpversion.cfg` contains a `current_version` key and 
 # Example usage
 
 ```yaml
-uses: landtechnologies/actions-check-bumpversion-cfg@v1.0.0
+uses: landtechnologies/actions-check-bumpversion-cfg@v2.0.0
 ```
 
 Enforces that you have a `.bumpversion.cfg` like
