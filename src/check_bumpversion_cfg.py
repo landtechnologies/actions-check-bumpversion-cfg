@@ -55,3 +55,11 @@ if __name__ == "__main__":
             )
         )
         sys.exit(13)
+
+    if "bumpversion:part:auto" not in parser:
+        print(
+            format_bumpversion_github_action_error(
+                "Must contain bumpversion:part:auto section, expected by downstream bumpversion invocation"
+            )
+        )
+        sys.exit(14)

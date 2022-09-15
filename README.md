@@ -13,22 +13,49 @@ Enforces that you have a `.bumpversion.cfg` like
 [bumpversion]
 current_version = 1.0.0
 new_version = 1.0.1
+
+[bumpversion:part:auto]
 ```
 
 Example configs which would fail this check
 
+Missing `new_version`
 ```cfg
 [bumpversion]
 current_version = 1.0.0
+
+[bumpversion:part:auto]
 ```
 
+Missing `current_version`
 ```cfg
 [bumpversion]
 new_version = 1.0.0
+
+[bumpversion:part:auto]
 ```
 
+`new_version < current_version`
 ```cfg
 [bumpversion]
 current_version = 3.0.0
 new_version = 2.1.0
+
+[bumpversion:part:auto]
+```
+
+`new_version` == `current_version`
+```cfg
+[bumpversion]
+current_version = 3.0.0
+new_version = 3.0.0
+
+[bumpversion:part:auto]
+```
+
+Missing `bumpversion:part:auto` section
+```cfg
+[bumpversion]
+current_version = 3.0.0
+new_version = 4.0.0
 ```
